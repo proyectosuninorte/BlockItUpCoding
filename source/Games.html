@@ -8,10 +8,18 @@
 </head>
 <body>
     <div class="menu">
-        
+        <nav>
+            <ul>
+                <li onclick="cambiarIframe('/source/expresionGame.html')">Expresiones</li>
+                <li onclick="cambiarIframe('/source/index.html')">About us</li>
+                <li>Servicios</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
     </div>
     <div class="frame">
-        <iframe src="/source/expresionGame.html" frameborder="0" ></iframe>
+        <iframe id="miIframe" src="/source/expresionGame.html" frameborder="0" ></iframe>
     </div>
+    <script src="/source/js/ChangeFrame.js"></script>
 </body>
 </html>

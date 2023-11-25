@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="/source/css/gameStyle.css">
 </head>
 <body>
+    <div class="pregunta"><p>seleccione la expresión es correcto</p></div>
     <div class="containerGame">
-        <div id="left">
+        
+        <div id="left" class="opciones">
             <div class="list" draggable="true"><img src="/source/image/list.png" alt="icono de lista">List Item 1
             </div>
             <div class="list" draggable="true"><img src="/source/image/list.png" alt="icono de lista">List Item 2
@@ -18,6 +20,10 @@
         </div>
         <div id="right"></div>
     </div>
+    <div class="listo">
+        <button onclick="comprobar()" id="">Verificar</button>
+    </div>
     <script src="/source/js/scriptOneDrop.js"></script>
+    <script src="/source/js/asksAndAswers.js"></script>
 </body>
 </html>
