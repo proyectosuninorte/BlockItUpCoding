@@ -29,7 +29,7 @@ function mostrarPregunta() {
     "8",
     "9","2"];
     const respuestaIncorrectaExpresionPseu = [["Si se va a ejecutar correctamente, dará como resultado –1.5. ",
-    "Si se va a ejecutar correctamente, porque no importa el tipo de dato con el que se declaren las variables,<br>ellas se ejecutaran de forma correcta para dar la respuesta esperada."],
+    "Si se va a ejecutar correctamente, porque no importa el tipo de dato con el que se declaren las variables,<br>DEellas se ejecutaran de forma correcta para dar la respuesta esperada."],
     ["10", "5"],["15","25"],["10","12"]];
 
 

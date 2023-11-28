@@ -58,3 +58,23 @@ ul li {
     background-color: #5d7bd5;
     border-color: #2352de;
 }
+.listo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    font-size: 2vb;
+    color: #fff;
+}
+button{
+    width: 15%;
+    height: 50px;
+    background: #0b132b;
+    color: #fff;
+    border: none;
+    border-radius: 10px; 
+    margin: 10px;
+    cursor: pointer;
+}
