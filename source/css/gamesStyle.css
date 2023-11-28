@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;	
     box-sizing: border-box;
     overflow: hidden;
+    
     font-family: 'Roboto', sans-serif;
 }
 body {
@@ -42,7 +43,6 @@ li{
 
 }	
 iframe{
-    margin-top: 10px;
     width: 85vw;
     height: 100vh;
     border: none;

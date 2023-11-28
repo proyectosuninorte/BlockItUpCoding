@@ -5,6 +5,10 @@ let rightBox = document.getElementById('right');
 let leftBox = document.getElementById('left');
 document.get
 let canDrop = true;
+function restablecerCanDrop() {
+    canDrop = true;
+}
+
 for (list of lists){
     list.addEventListener('dragstart', function(e){
         let selected = e.target;
