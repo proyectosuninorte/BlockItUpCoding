@@ -23,10 +23,11 @@ ul{
     justify-content: center;
 }
 li{
+    cursor: pointer;
     margin: 8vb;
     list-style: none;
     color: #fff;
-    font-size: 40px;
+    font-size: 35px;
     display: flex;
     align-items: center;
     justify-content: center;

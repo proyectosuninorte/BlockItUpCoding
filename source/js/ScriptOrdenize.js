@@ -2,6 +2,38 @@ let currentElement = "";
 let list = document.getElementById("list");
 let initialX = 0,initialY = 0;
 
+const ordenarDes = [
+    [
+        "Inicio<br>Real calif1, calif2, calif3, prom <br> Leer calif1, calif2, calif3 <br> prom <- (calif1 + calif2 + calif3)/3",
+        "Si (prom >= 70) entonces<br>Escribir “alumno aprobado” ",
+        "si no  <br>Escribir “alumno reprobado” ",
+        " Fin-si <br>Fin "
+    ],
+    [
+        "Inicio<br>Real compra, desc, tot_pag<br>Leer compra",
+        "Si compra > 1000 entonces<br>desc <- compra * 0.20",
+        "si no<br>desc <- 0<br>fin-si",
+        "tot_pag <- compra – desc<br>Escribir tot_pag<br>Fin"
+    ],
+    [
+        "Inicio<br>Entero num<br>Leer num",
+        "Si(num mod 3 <> 0) entonces<br>Escribir “El número no es divisible entre 3”",
+        "Sino<br>Escribir “El número es divisible entre 3”",
+        "Fin"
+    ]
+];
+function shuffleArray(array) {
+    const newArray = array.slice(); // Creamos una copia del array original
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // Generamos un índice aleatorio
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]]; // Intercambiamos los elementos
+    }
+    return newArray;
+}
+
+function verificar(){
+    
+}
 const isTouchDevice = () => {
 try {
     
@@ -13,8 +45,8 @@ try {
 };
 
 const creator = (count) => {
-    for (let i = 1; i <= count; i++) {
-    list.innerHTML += `<li class="list-item" data-value ="${i}">Item-${i} </li>`;
+    for (let i = 0; i < count; i++) {
+    list.innerHTML += `<li class="list-item" data-value ="${i}">${ordenarDes[0][i]} </li>`;
 }
 };
 
@@ -72,15 +104,18 @@ window.onload = async () => {
     customElement = "";
     list.innerHTML = "";
 
-    await creator(5);
+    const shuffledOrdenarDes = ordenarDes.map((subArray) => shuffleArray(subArray)).flat();
+
+    await creator(shuffledOrdenarDes.length);
 
     let listItems = document.querySelectorAll(".list-item");
     listItems.forEach((element) => {
-    element.draggable = true;
-    element.addEventListener("dragstart", dragStart, false);
-    element.addEventListener("dragover", dragOver, false);
-    element.addEventListener("drop", drop, false);
-    element.addEventListener("touchstart", dragStart, false);
-    element.addEventListener("touchmove", drop, false);
+        element.draggable = true;
+        element.addEventListener("dragstart", dragStart, false);
+        element.addEventListener("dragover", dragOver, false);
+        element.addEventListener("drop", drop, false);
+        element.addEventListener("touchstart", dragStart, false);
+        element.addEventListener("touchmove", drop, false);
     });
 };
+
